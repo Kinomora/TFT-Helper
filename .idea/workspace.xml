@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fabb69a0-ad8e-4ade-9204-11f383f1b825" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Kinomora.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TFT Helper.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/gson-2.8.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/guava-29.0.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/LeagueItemIcons/set3.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/META-INF/TFT Helper.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/CraftingManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/FileManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/Inventory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/Item.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/ItemType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/ItemTypeTypeAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/Recipe.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/RecipeTypeAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/window/InventoryPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/window/ItemButton.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/window/ItemDescPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/window/StatsPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/window/Window.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/29.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/39.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/44.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/45.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/47.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/49.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/55.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/56.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/57.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/58.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/59.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/66.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/67.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/68.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/69.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/77.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/78.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/79.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/88.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/89.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/icons/99.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/items.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TFT Helper/recipes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/LeagueItemIcons/set3.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/29.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/39.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/44.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/45.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/47.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/49.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/55.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/56.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/57.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/58.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/59.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/66.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/67.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/68.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/69.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/77.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/78.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/79.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/88.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/89.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/icons/99.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/items.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/recipes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/kinomora/CraftingManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/kinomora/FileManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/kinomora/Inventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/kinomora/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/kinomora/ItemType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/kinomora/ItemTypeTypeAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/kinomora/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/kinomora/Recipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/kinomora/RecipeTypeAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/kinomora/window/InventoryPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/kinomora/window/ItemButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/kinomora/window/ItemDescPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/kinomora/window/StatsPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/kinomora/window/Window.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Kinomora" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bEEpgLj7SBEOVRqCiQwO9ao6kq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Libs/gson-2.8.6.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kinomora\Desktop\IntelliJ Projects\TFT Helper\src\com\kinomora\window" />
+      <recent name="C:\Users\Kinomora\Desktop\IntelliJ Projects\TFT Helper\resources" />
+      <recent name="C:\Users\Kinomora\Desktop\IntelliJ Projects\TFT Helper\Libs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kinomora\Desktop\IntelliJ Projects\TFT Helper\Libs" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.kinomora.Main" />
+      <module name="TFT Helper" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fabb69a0-ad8e-4ade-9204-11f383f1b825" name="Default Changelist" comment="" />
+      <created>1588189036935</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588189036935</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="955" y="504" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588196047363">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="955" y="504" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588196047363" />
+    <state x="1050" y="417" key="#com.intellij.ide.util.MemberChooser" timestamp="1588265947554">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1050" y="417" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588265947554" />
+    <state x="1117" y="590" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588189342199">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1117" y="590" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588189342199" />
+    <state x="1032" y="586" width="495" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588264794091">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1032" y="586" width="495" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588264794091" />
+    <state x="1033" y="172" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588190504560">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1033" y="172" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588190504560" />
+    <state x="1010" y="448" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588264339198">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="448" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588264339198" />
+    <state x="824" y="295" key="CommitChangelistDialog2" timestamp="1588290230091">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="824" y="295" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588290230091" />
+    <state x="1015" y="417" key="DetectedRootsChooserDialog" timestamp="1588193699265">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1015" y="417" key="DetectedRootsChooserDialog/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588193699265" />
+    <state x="877" y="442" key="FileChooserDialogImpl" timestamp="1588289903112">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="877" y="442" key="FileChooserDialogImpl/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588289903112" />
+    <state x="885" y="442" width="497" height="372" key="Github.ShareDialog" timestamp="1588290134941">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="885" y="442" width="497" height="372" key="Github.ShareDialog/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588290134941" />
+    <state x="961" y="406" key="Github.UntrackedFilesDialog" timestamp="1588290143847">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="961" y="406" key="Github.UntrackedFilesDialog/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588290143847" />
+    <state width="2519" height="141" key="GridCell.Tab.0.bottom" timestamp="1588274703139">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2519" height="141" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588274703139" />
+    <state width="2519" height="141" key="GridCell.Tab.0.center" timestamp="1588274703139">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2519" height="141" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588274703139" />
+    <state width="2519" height="141" key="GridCell.Tab.0.left" timestamp="1588274703138">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2519" height="141" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588274703138" />
+    <state width="2519" height="141" key="GridCell.Tab.0.right" timestamp="1588274703139">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2519" height="141" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588274703139" />
+    <state x="312" y="275" width="1895" height="849" key="SettingsEditor" timestamp="1588196256681">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="312" y="275" width="1895" height="849" key="SettingsEditor/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588196256681" />
+    <state x="976" y="329" key="refactoring.ChangeSignatureDialog" timestamp="1588266014798">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="976" y="329" key="refactoring.ChangeSignatureDialog/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588266014798" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1588267368331">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588267368331" />
+  </component>
+</project>

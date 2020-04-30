@@ -1,0 +1,182 @@
+[
+    {
+        "Output": "Blade of the Ruined King",
+        "Inputs": ["B.F. Sword", "Spatula"]
+    },
+    {
+        "Output": "Bloodthirster",
+        "Inputs": ["B.F. Sword", "Negatron Cloak"]
+    },
+    {
+        "Output": "Dragon's Claw",
+        "Inputs": ["Negatron Cloak", "Negatron Cloak"]
+    },
+    {
+        "Output": "Force of Nature",
+        "Inputs": ["Spatula", "Spatula"]
+    },
+    {
+        "Output": "Frozen Heart",
+        "Inputs": ["Chain Vest", "Tear of the Goddess"]
+    },
+    {
+        "Output": "Guardian Angel",
+        "Inputs": ["B.F. Sword", "Chain Vest"]
+    },
+    {
+        "Output": "Guinsoo's Rageblade",
+        "Inputs": ["Recurve Bow", "Needlessly Large Rod"]
+    },
+    {
+        "Output": "Hextech Gunblade",
+        "Inputs": ["B.F. Sword", "Needlessly Large Rod"]
+    },
+    {
+        "Output": "Infinity Edge",
+        "Inputs": ["B.F. Sword", "Sparring Gloves"]
+    },
+    {
+        "Output": "Ionic Spark",
+        "Inputs": ["Negatron Cloak", "Needlessly Large Rod"]
+    },
+    {
+        "Output": "Locket of the Iron Solari",
+        "Inputs": ["Chain Vest", "Needlessly Large Rod"]
+    },
+    {
+        "Output": "Luden's Echo",
+        "Inputs": ["Needlessly Large Rod", "Tear of the Goddess"]
+    },
+    {
+        "Output": "Morellonomicon",
+        "Inputs": ["Needlessly Large Rod", "Giant's Belt"]
+    },
+    {
+        "Output": "Rabadon's Deathcap",
+        "Inputs": ["Needlessly Large Rod", "Needlessly Large Rod"]
+    },
+    {
+        "Output": "Rapid Firecannon",
+        "Inputs": ["Recurve Bow", "Recurve Bow"]
+    },
+    {
+        "Output": "Red Buff",
+        "Inputs": ["Chain Vest", "Giant's Belt"]
+    },
+    {
+        "Output": "Redemption",
+        "Inputs": ["Tear of the Goddess", "Giant's Belt"]
+    },
+    {
+        "Output": "Runaan's Hurricane",
+        "Inputs": ["Recurve Bow", "Negatron Cloak"]
+    },
+    {
+        "Output": "Seraph's Embrace",
+        "Inputs": ["Tear of the Goddess", "Tear of the Goddess"]
+    },
+    {
+        "Output": "Spear of Shojin",
+        "Inputs": ["B.F. Sword", "Tear of the Goddess"]
+    },
+    {
+        "Output": "Statikk Shiv",
+        "Inputs": ["Recurve Bow", "Tear of the Goddess"]
+    },
+    {
+        "Output": "Sword Breaker",
+        "Inputs": ["Chain Vest", "Negatron Cloak"]
+    },
+    {
+        "Output": "Warmog's Armor",
+        "Inputs": ["Giant's Belt", "Giant's Belt"]
+    },
+    {
+        "Output": "Zeke's Herald",
+        "Inputs": ["B.F. Sword", "Giant's Belt"]
+    },
+    {
+        "Output": "Zephyr",
+        "Inputs": ["Negatron Cloak", "Giant's Belt"]
+    },
+    {
+        "Output": "Thief's Gloves",
+        "Inputs": ["Sparring Gloves", "Sparring Gloves"]
+    },
+    {
+        "Output": "Hand of Justice",
+        "Inputs": ["Tear of the Goddess", "Sparring Gloves"]
+    },
+    {
+        "Output": "Jeweled Gauntlet",
+        "Inputs": ["Needlessly Large Rod", "Sparring Gloves"]
+    },
+    {
+        "Output": "Quicksilver",
+        "Inputs": ["Negatron Cloak", "Sparring Gloves"]
+    },
+    {
+        "Output": "Trap Claw",
+        "Inputs": ["Giant's Belt", "Sparring Gloves"]
+    },
+    {
+        "Output": "Deathblade",
+        "Inputs": ["B.F. Sword", "B.F. Sword"]
+    },
+    {
+        "Output": "Giant Slayer",
+        "Inputs": ["B.F. Sword", "Recurve Bow"]
+    },
+    {
+        "Output": "Last Whisper",
+        "Inputs": ["Recurve Bow", "Sparring Gloves"]
+    },
+    {
+        "Output": "Bramble Vest",
+        "Inputs": ["Chain Vest", "Chain Vest"]
+    },
+    {
+        "Output": "Titan's Resolve",
+        "Inputs": ["Recurve Bow", "Chain Vest"]
+    },
+    {
+        "Output": "Zz'Rot Portal",
+        "Inputs": ["Recurve Bow", "Giant's Belt"]
+    },
+    {
+        "Output": "Rebel Medal",
+        "Inputs": ["Chain Vest", "Spatula"]
+    },
+    {
+        "Output": "Infiltrator's Talons",
+        "Inputs": ["Recurve Bow", "Spatula"]
+    },
+    {
+        "Output": "Shroud of Stillness",
+        "Inputs": ["Chain Vest", "Sparring Gloves"]
+    },
+    {
+        "Output": "Chalice of Favor",
+        "Inputs": ["Negatron Cloak", "Tear of the Goddess"]
+    },
+    {
+        "Output": "Celestial Orb",
+        "Inputs": ["Negatron Cloak", "Spatula"]
+    },
+    {
+        "Output": "Star Guardian's Charm",
+        "Inputs": ["Tear of the Goddess", "Spatula"]
+    },
+    {
+        "Output": "Demolitionist's Charge",
+        "Inputs": ["Needlessly Large Rod", "Spatula"]
+    },
+    {
+        "Output": "Protector's Chestguard",
+        "Inputs": ["Giant's Belt", "Spatula"]
+    },
+    {
+        "Output": "Dark Star's Heart",
+        "Inputs": ["Spatula", "Sparring Gloves"]
+    }
+]
