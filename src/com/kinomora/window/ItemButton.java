@@ -4,6 +4,7 @@ import com.kinomora.CraftingManager;
 import com.kinomora.Inventory;
 import com.kinomora.ItemType;
 import com.kinomora.Recipe;
+import com.kinomora.window.overview.ItemsOverviewTab;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,15 +22,20 @@ public class ItemButton extends JButton implements ActionListener, MouseListener
     public final int index;
 
     public ItemButton(int index, boolean isInventory, ItemDescPanel itemDescPanel, InventoryPanel inventoryPanel) {
+        //local variables
+        this.isInventory = isInventory;
+        this.itemDescPanel = itemDescPanel;
+        this.inventoryPanel = inventoryPanel;
+        this.index = index;
+
+        //Listeners
+        this.addMouseListener(this);
+        this.addActionListener(this);
+
+        //object configuration
         this.setMargin(new Insets(0, 0, 0, 0));
         this.setIcon(new ImageIcon("empty.png"));
         this.setEnabled(false);
-        this.isInventory = isInventory;
-        this.itemDescPanel = itemDescPanel;
-        this.addMouseListener(this);
-        this.addActionListener(this);
-        this.inventoryPanel = inventoryPanel;
-        this.index = index;
     }
 
     public void setType(ItemType type) {

@@ -1,6 +1,8 @@
 package com.kinomora.window.overview;
 
+import com.kinomora.CraftingManager;
 import com.kinomora.FileManager;
+import com.kinomora.Inventory;
 import com.kinomora.ItemType;
 import com.kinomora.window.InventoryPanel;
 import com.kinomora.window.ItemButton;
@@ -36,11 +38,9 @@ public class ItemsOverviewTab {
 
         //Bottom half of the Items(overview) tab, contains the Items and Craftable tabs
         JTabbedPane subTabbedPane = new JTabbedPane();
-        JPanel bottomPanel = new JPanel();
-        bottomPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
 
         //Calls the methods to create the two subtabs for "Items" and "Craftables" in the bottom panel
-        populateItemSubtab(subTabbedPane, bottomPanel);
+        populateItemSubtab(subTabbedPane);
         populateCraftingSubtab(subTabbedPane);
 
         //Add the top panel and the bottom pane to the main Items(Overview) window
@@ -48,7 +48,14 @@ public class ItemsOverviewTab {
         itemsTab.add(subTabbedPane, BorderLayout.CENTER);
     }
 
-    private void populateItemSubtab(JTabbedPane subTabbedPane, JPanel bottomPanel) {
+    /**
+     * Items Subtab within the Items Overview tab
+     * @param subTabbedPane
+     */
+    private void populateItemSubtab(JTabbedPane subTabbedPane) {
+        // Make the Items subtab to the
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
         subTabbedPane.addTab("Items", bottomPanel);
 
         //Adds all items from the /resources/icons folder to the bottomPanel
@@ -61,9 +68,27 @@ public class ItemsOverviewTab {
         }
     }
 
+    /**
+     * Crafting Subtab within the Items Overview tab
+     * @param subTabbedPane
+     */
     private void populateCraftingSubtab(JTabbedPane subTabbedPane) {
-        subTabbedPane.addTab("Craftables", new JPanel());
-        //TODO Generate code that will need to be updated as the inventory is updated, to display new craftable items
+        //
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
+        subTabbedPane.addTab("Craftables", bottomPanel);
+
+        //Add items to the panel for every craftable item that's in the inventory
+        updateCraftingSubtab();
+    }
+
+    /**
+     * Update the Crafting tab with all currently craftable items
+     */
+    public void updateCraftingSubtab(){
+        if(CraftingManager.getAllCraftables(inventoryPanel.inventory).size() > 0){
+            System.out.println("Number of craftable items: " + CraftingManager.getAllCraftables(inventoryPanel.inventory).size());
+        }
     }
 
     /**

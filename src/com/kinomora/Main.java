@@ -26,13 +26,5 @@ public class Main {
         window.setSize(687, 902);
         window.setResizable(false);
         window.setVisible(true);
-
-        //Print inventory and craftable
-        /*System.out.println("Current Inventory: " + inventory);
-        System.out.println("");
-        System.out.println("Craftable items:");
-        for (Recipe recipe : CraftingManager.getAllCraftables(inventory)) {
-            System.out.println(recipe);
-        }*/
     }
 }
