@@ -20,11 +20,11 @@ public class ItemsOverviewTab {
      * Creates and populates the Items(Overview) tab which contains the Inventory, Item Descriptions, Recommended Champions, and Inventory Item Crafting Calculator
      */
     public ItemsOverviewTab() {
-        createTab();
+        generateTab();
     }
 
     //This contains all the code for adding content to the Champion tab
-    private void createTab() {
+    private void generateTab() {
 
         //Set the layout for the window
         itemsTab.setLayout(new BorderLayout());
@@ -39,9 +39,17 @@ public class ItemsOverviewTab {
         JPanel bottomPanel = new JPanel();
         bottomPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
 
-        //Creates the two tabbed panes for "Items" and "Craftables" in the bottom panel
+        //Calls the methods to create the two subtabs for "Items" and "Craftables" in the bottom panel
+        populateItemSubtab(subTabbedPane, bottomPanel);
+        populateCraftingSubtab(subTabbedPane);
+
+        //Add the top panel and the bottom pane to the main Items(Overview) window
+        itemsTab.add(topPanel, BorderLayout.PAGE_START);
+        itemsTab.add(subTabbedPane, BorderLayout.CENTER);
+    }
+
+    private void populateItemSubtab(JTabbedPane subTabbedPane, JPanel bottomPanel) {
         subTabbedPane.addTab("Items", bottomPanel);
-        subTabbedPane.addTab("Craftables", new JPanel());
 
         //Adds all items from the /resources/icons folder to the bottomPanel
         for (File icon : new File(FileManager.resources, "icons").listFiles()) {
@@ -51,14 +59,16 @@ public class ItemsOverviewTab {
             item.setMargin(new Insets(0, 0, 0, 0));
             bottomPanel.add(item);
         }
+    }
 
-        //Add the top panel and the bottom pane to the main Items(Overview) window
-        itemsTab.add(topPanel, BorderLayout.PAGE_START);
-        itemsTab.add(subTabbedPane, BorderLayout.CENTER);
+    private void populateCraftingSubtab(JTabbedPane subTabbedPane) {
+        subTabbedPane.addTab("Craftables", new JPanel());
+        //TODO Generate code that will need to be updated as the inventory is updated, to display new craftable items
     }
 
     /**
      * Simply returns the JPanel object for itemsTab
+     *
      * @return JPanel object of itemsTab
      */
     public JPanel getItemsTab() {
