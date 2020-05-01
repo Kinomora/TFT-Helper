@@ -15,6 +15,7 @@ public class CraftingManager {
     //add a recipe from a source (code, json, ect)
     public static void addRecipe(Recipe recipe) {
         //adds to the RECIPES map a recipe where item1 and item2 are paired ingredients.
+        //RECIPES.put(new Pair(recipe.input1, recipe.input2), recipe); - old code for adding recipes to the recipes map
         RECIPES.put(new Pair(recipe.input1, recipe.input2), recipe);
     }
 
@@ -55,7 +56,7 @@ public class CraftingManager {
 
                 //iterate through the inventory and get the item in inventory slot i and get the recipe of crafting it with j
                 Recipe recipeResult = getRecipe(inventory.items.get(i).type, inventory.items.get(j).type);
-                if(recipeResult != null){
+                if (recipeResult != null) {
                     craftables.add(recipeResult);
                 }
             }

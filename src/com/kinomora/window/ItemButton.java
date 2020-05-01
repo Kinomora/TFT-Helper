@@ -1,7 +1,9 @@
 package com.kinomora.window;
 
+import com.kinomora.CraftingManager;
 import com.kinomora.Inventory;
 import com.kinomora.ItemType;
+import com.kinomora.Recipe;
 
 import javax.swing.*;
 import java.awt.*;
@@ -40,7 +42,6 @@ public class ItemButton extends JButton implements ActionListener, MouseListener
             this.setIcon(type.getIcon());
         }
         this.type = type;
-
     }
 
     //Action Listener events
@@ -68,7 +69,14 @@ public class ItemButton extends JButton implements ActionListener, MouseListener
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
+        //TODO: Remove this test code
+        if (this.inventoryPanel.inventory.items.size() > 1) {
+            System.out.println("Craftable items:");
+            for (Recipe recipe : CraftingManager.getAllCraftables(this.inventoryPanel.inventory)) {
+                System.out.println(recipe);
+            }
+            System.out.println("");
+        }
     }
 
     @Override

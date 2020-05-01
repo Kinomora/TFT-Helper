@@ -24,7 +24,7 @@ public class ChampionPanel extends JPanel {
             championsArray[i] = championIcon;
 
             //TODO: Change the border to the actual champion name instead of hard-coding it
-            championIcon.setBorder(new TitledBorder("Champion " + (i+1)));
+            championIcon.setBorder(new TitledBorder("Champion " + (i + 1)));
 
             //Add the button to the inventory panel
             this.add(championIcon, i);

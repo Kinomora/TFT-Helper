@@ -2,7 +2,6 @@ package com.kinomora.window;
 
 import com.kinomora.FileManager;
 import com.kinomora.ItemType;
-import com.kinomora.Main;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,15 +13,21 @@ public class Window extends JFrame implements KeyListener {
     public ItemDescPanel itemDescPanel = new ItemDescPanel();
     public InventoryPanel inventoryPanel = new InventoryPanel(itemDescPanel);
 
+    //This is the main window class that creates the program window, the Game and Item(overview) tabs, and all the contents in them
     public Window(String title) throws HeadlessException {
         super(title);
         this.addKeyListener(this);
 
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
+        //The main window that holds the overview tabs
         JTabbedPane tabs = new JTabbedPane();
 
+        //Creating the main overview tabs
+        JPanel gameTab = new JPanel();
         JPanel itemsTab = new JPanel();
+        JPanel championsTab = new JPanel();
+
         itemsTab.setLayout(new BorderLayout());
 
         JPanel topPanel = new JPanel(new BorderLayout());
@@ -30,35 +35,35 @@ public class Window extends JFrame implements KeyListener {
         topPanel.add(inventoryPanel, BorderLayout.WEST);
         topPanel.add(itemDescPanel, BorderLayout.CENTER);
 
-        JTabbedPane otherTabbedPane = new JTabbedPane();
-        otherTabbedPane.setBackground(Color.BLUE);
+        JTabbedPane subTabbedPane = new JTabbedPane();
+        subTabbedPane.setBackground(Color.BLUE);
         JPanel items = new JPanel();
         items.setLayout(new FlowLayout(FlowLayout.LEADING));
 
         for (File icon : new File(FileManager.resources, "icons").listFiles()) {
             ItemButton item = new ItemButton(0,false, itemDescPanel, inventoryPanel);
-            ItemType type = ItemType.get(icon.getName().substring(0, icon.getName().indexOf('.')));
+            ItemType type = ItemType.getItemTypeFromName(icon.getName().substring(0, icon.getName().indexOf('.')));
             item.setType(type);
             item.setMargin(new Insets(0, 0, 0, 0));
             items.add(item);
         }
 
-        otherTabbedPane.addTab("Items", items);
-        otherTabbedPane.addTab("Craftables", new JPanel());
+        subTabbedPane.addTab("Items", items);
+        subTabbedPane.addTab("Craftables", new JPanel());
 
         itemsTab.add(topPanel, BorderLayout.PAGE_START);
-        itemsTab.add(otherTabbedPane, BorderLayout.CENTER);
+        itemsTab.add(subTabbedPane, BorderLayout.CENTER);
 
-        JPanel gameTab = new JPanel();
         tabs.addTab("Game", gameTab);
         tabs.addTab("Items", itemsTab);
+        tabs.addTab("Champions", championsTab);
 
         this.setContentPane(tabs);
     }
 
     @Override
     public void keyTyped(KeyEvent e) {
-        System.out.println(e);
+        /*System.out.println(e);
         if (e.getKeyChar() == ' ') {
             System.out.println("Setting default item");
             itemDescPanel.setItemInfo(new ItemType("bfs.png", "BF Sword", "This is a Big Fucking Sword"));
@@ -66,12 +71,12 @@ public class Window extends JFrame implements KeyListener {
         else if (e.getKeyChar() == 'r') {
             System.out.println("Clearing item");
             itemDescPanel.setItemInfo(null);
-        }
+        }*/
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        System.out.println(e);
+        /*System.out.println(e);
         if (e.getKeyChar() == ' ') {
             System.out.println("Setting default item");
             itemDescPanel.setItemInfo(new ItemType("bfs.png", "BF Sword", "This is a Big Fucking Sword"));
@@ -79,11 +84,11 @@ public class Window extends JFrame implements KeyListener {
         else if (e.getKeyChar() == 'r') {
             System.out.println("Clearing item");
             itemDescPanel.setItemInfo(null);
-        }
+        }*/
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        System.out.println(e);
+        //System.out.println(e);
     }
 }

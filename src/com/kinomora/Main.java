@@ -4,6 +4,7 @@ import com.kinomora.window.Window;
 
 import javax.swing.*;
 import java.io.File;
+import java.net.Inet4Address;
 
 public class Main {
 
@@ -17,7 +18,7 @@ public class Main {
         FileManager.loadItems();
 
         //load the recipes from recipes.json - must be done after items
-        //FileManager.loadRecipes();
+        FileManager.loadRecipes();
 
         //Set up the GUI window - must be done after loading items and recipes
         Window window = new Window("TFT Helper - Set 3");
