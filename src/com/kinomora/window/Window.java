@@ -36,7 +36,7 @@ public class Window extends JFrame implements KeyListener {
         items.setLayout(new FlowLayout(FlowLayout.LEADING));
 
         for (File icon : new File(FileManager.resources, "icons").listFiles()) {
-            ItemButton item = new ItemButton(false, itemDescPanel);
+            ItemButton item = new ItemButton(0,false, itemDescPanel, inventoryPanel);
             ItemType type = ItemType.get(icon.getName().substring(0, icon.getName().indexOf('.')));
             item.setType(type);
             item.setMargin(new Insets(0, 0, 0, 0));
