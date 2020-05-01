@@ -1,10 +1,8 @@
 package com.kinomora.window;
 
 import com.kinomora.CraftingManager;
-import com.kinomora.Inventory;
 import com.kinomora.ItemType;
 import com.kinomora.Recipe;
-import com.kinomora.window.overview.ItemsOverviewTab;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,6 +18,7 @@ public class ItemButton extends JButton implements ActionListener, MouseListener
     public final ItemDescPanel itemDescPanel;
     public final InventoryPanel inventoryPanel;
     public final int index;
+    private boolean hasMouseExited;
 
     public ItemButton(int index, boolean isInventory, ItemDescPanel itemDescPanel, InventoryPanel inventoryPanel) {
         //local variables
@@ -53,13 +52,7 @@ public class ItemButton extends JButton implements ActionListener, MouseListener
     //Action Listener events
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (isInventory) {
-            this.inventoryPanel.removeItem(index);
-            this.itemDescPanel.setItemInfo(null);
-        }
-        else {
-            this.inventoryPanel.addItem(type);
-        }
+        this.hasMouseExited = false;
     }
 
     //Mouse listener events
@@ -71,18 +64,11 @@ public class ItemButton extends JButton implements ActionListener, MouseListener
     @Override
     public void mouseExited(MouseEvent e) {
         this.itemDescPanel.setItemInfo(null);
+        this.hasMouseExited = true;
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        //TODO: Remove this test code
-        if (this.inventoryPanel.inventory.items.size() > 1) {
-            System.out.println("Craftable items:");
-            for (Recipe recipe : CraftingManager.getAllCraftables(this.inventoryPanel.inventory)) {
-                System.out.println(recipe);
-            }
-            System.out.println("");
-        }
     }
 
     @Override
@@ -92,6 +78,28 @@ public class ItemButton extends JButton implements ActionListener, MouseListener
 
     @Override
     public void mouseReleased(MouseEvent e) {
+        if (!hasMouseExited) {
+            //Left click is add-to-inventory, no crafting
+            if (e.getButton() == MouseEvent.BUTTON1) {
+                if (isInventory) {
+                    this.inventoryPanel.removeItem(index);
+                    this.itemDescPanel.setItemInfo(null);
+                }
+                else {
+                    this.inventoryPanel.addItem(type);
+                }
+            }
+        }
 
+        //Right click is craft item from inventory items
+        if(e.getButton() == MouseEvent.BUTTON3)
+        {
+            //Create a recipe object for the itemType that we are hovering over
+            Recipe recipeForItem = CraftingManager.getRecipe(type);
+
+            //Check if the inventory has the items needed to craft this item
+            CraftingManager.craft(this.inventoryPanel.inventory, type);
+                inventoryPanel.sortInventory();
+        }
     }
 }

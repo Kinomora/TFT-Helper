@@ -5,10 +5,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/CraftingManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/CraftingManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/window/InventoryPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/window/InventoryPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/window/ItemButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/window/ItemButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/window/ItemDescPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/window/ItemDescPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/window/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TFT Helper/com/kinomora/window/Window.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/kinomora/CraftingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kinomora/CraftingManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/kinomora/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kinomora/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kinomora/window/InventoryPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kinomora/window/InventoryPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/kinomora/window/ItemButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kinomora/window/ItemButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kinomora/window/ItemDescPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kinomora/window/ItemDescPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/kinomora/window/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kinomora/window/Window.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/kinomora/window/overview/ItemsOverviewTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kinomora/window/overview/ItemsOverviewTab.java" afterDir="false" />
     </list>
@@ -176,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588323565104</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Slight changes to Window.java and ItemsOverviewTab.java code, mostly rearranges">
+      <created>1588369118612</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588369118612</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -185,7 +197,8 @@
     <MESSAGE value="Fixed the recipe code so recipes are now loading correctly again&#10;added a bit of test code to the on-click event so you can see what items can be crafting using the crafting manager&#10;began commenting and refactoring the Window.java class and moving code into new packages and classes for better organization" />
     <MESSAGE value="Moved Item(Overview) Tab code from Window.java to ItemsOverviewPane.java&#10;Cleaned up Window.java code and added comments" />
     <MESSAGE value="Moved itemsOverview subtabs to new methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved itemsOverview subtabs to new methods" />
+    <MESSAGE value="Slight changes to Window.java and ItemsOverviewTab.java code, mostly rearranges" />
+    <option name="LAST_COMMIT_MESSAGE" value="Slight changes to Window.java and ItemsOverviewTab.java code, mostly rearranges" />
   </component>
   <component name="WindowStateProjectService">
     <state x="955" y="504" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588196047363">
@@ -205,19 +218,20 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1032" y="586" width="495" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588264794091" />
-    <state x="1033" y="172" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588190504560">
+    <state x="1033" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588374224378">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1033" y="172" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588190504560" />
+    <state x="1033" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/2560.0.1080.1880/-1280.0.1280.984/0.0.2560.1400@0.0.2560.1400" timestamp="1588374224378" />
     <state x="1010" y="448" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588264339198">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="448" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588264339198" />
-    <state x="760" y="248" key="CommitChangelistDialog2" timestamp="1588323564820">
+    <state x="760" y="248" key="CommitChangelistDialog2" timestamp="1588369118278">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="760" y="248" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588315872900" />
-    <state x="760" y="248" key="CommitChangelistDialog2/2560.0.1080.1880/-1280.0.1280.984/0.0.2560.1400@0.0.2560.1400" timestamp="1588323564820" />
+    <state x="760" y="248" key="CommitChangelistDialog2/2560.0.1080.1880/-1280.0.1280.984/0.0.2560.1400@0.0.2560.1400" timestamp="1588369118278" />
     <state x="1015" y="417" key="DetectedRootsChooserDialog" timestamp="1588193699265">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -234,43 +248,44 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="961" y="406" key="Github.UntrackedFilesDialog/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588290143847" />
-    <state width="2519" height="161" key="GridCell.Tab.0.bottom" timestamp="1588369067217">
+    <state width="2519" height="212" key="GridCell.Tab.0.bottom" timestamp="1588374302246">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2519" height="391" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588315997066" />
-    <state width="2519" height="161" key="GridCell.Tab.0.bottom/2560.0.1080.1880/-1280.0.1280.984/0.0.2560.1400@0.0.2560.1400" timestamp="1588369067217" />
-    <state width="2519" height="161" key="GridCell.Tab.0.center" timestamp="1588369067217">
+    <state width="2519" height="212" key="GridCell.Tab.0.bottom/2560.0.1080.1880/-1280.0.1280.984/0.0.2560.1400@0.0.2560.1400" timestamp="1588374302246" />
+    <state width="2519" height="212" key="GridCell.Tab.0.center" timestamp="1588374302246">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2519" height="391" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588315997066" />
-    <state width="2519" height="161" key="GridCell.Tab.0.center/2560.0.1080.1880/-1280.0.1280.984/0.0.2560.1400@0.0.2560.1400" timestamp="1588369067217" />
-    <state width="2519" height="161" key="GridCell.Tab.0.left" timestamp="1588369067217">
+    <state width="2519" height="212" key="GridCell.Tab.0.center/2560.0.1080.1880/-1280.0.1280.984/0.0.2560.1400@0.0.2560.1400" timestamp="1588374302246" />
+    <state width="2519" height="212" key="GridCell.Tab.0.left" timestamp="1588374302246">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2519" height="391" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588315997066" />
-    <state width="2519" height="161" key="GridCell.Tab.0.left/2560.0.1080.1880/-1280.0.1280.984/0.0.2560.1400@0.0.2560.1400" timestamp="1588369067217" />
-    <state width="2519" height="161" key="GridCell.Tab.0.right" timestamp="1588369067217">
+    <state width="2519" height="212" key="GridCell.Tab.0.left/2560.0.1080.1880/-1280.0.1280.984/0.0.2560.1400@0.0.2560.1400" timestamp="1588374302246" />
+    <state width="2519" height="212" key="GridCell.Tab.0.right" timestamp="1588374302246">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2519" height="391" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588315997066" />
-    <state width="2519" height="161" key="GridCell.Tab.0.right/2560.0.1080.1880/-1280.0.1280.984/0.0.2560.1400@0.0.2560.1400" timestamp="1588369067217" />
+    <state width="2519" height="212" key="GridCell.Tab.0.right/2560.0.1080.1880/-1280.0.1280.984/0.0.2560.1400@0.0.2560.1400" timestamp="1588374302246" />
     <state x="312" y="275" width="1895" height="849" key="SettingsEditor" timestamp="1588196256681">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="312" y="275" width="1895" height="849" key="SettingsEditor/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588196256681" />
-    <state x="872" y="434" key="Vcs.Push.Dialog.v2" timestamp="1588323566824">
+    <state x="872" y="434" key="Vcs.Push.Dialog.v2" timestamp="1588369120906">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="872" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588315875938" />
-    <state x="872" y="434" key="Vcs.Push.Dialog.v2/2560.0.1080.1880/-1280.0.1280.984/0.0.2560.1400@0.0.2560.1400" timestamp="1588323566824" />
+    <state x="872" y="434" key="Vcs.Push.Dialog.v2/2560.0.1080.1880/-1280.0.1280.984/0.0.2560.1400@0.0.2560.1400" timestamp="1588369120906" />
     <state x="928" y="316" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1588301670293">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="928" y="316" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588301670293" />
-    <state x="1048" y="618" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588300875179">
+    <state x="1055" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588374705517">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1048" y="618" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400/2560.0.1080.1880/-1280.0.1280.984@0.0.2560.1400" timestamp="1588300875179" />
+    <state x="1055" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.0.1080.1880/-1280.0.1280.984/0.0.2560.1400@0.0.2560.1400" timestamp="1588374705517" />
     <state x="976" y="329" key="refactoring.ChangeSignatureDialog" timestamp="1588266014798">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

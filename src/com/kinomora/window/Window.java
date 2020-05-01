@@ -1,8 +1,5 @@
 package com.kinomora.window;
 
-import com.kinomora.FileManager;
-import com.kinomora.Item;
-import com.kinomora.ItemType;
 import com.kinomora.window.overview.ChampionsOverviewTab;
 import com.kinomora.window.overview.GameOverviewTab;
 import com.kinomora.window.overview.ItemsOverviewTab;
@@ -10,7 +7,6 @@ import com.kinomora.window.overview.ItemsOverviewTab;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.File;
 
 public class Window extends JFrame implements KeyListener {
 

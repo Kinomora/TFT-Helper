@@ -1,6 +1,8 @@
 package com.kinomora.window;
 
+import com.kinomora.CraftingManager;
 import com.kinomora.ItemType;
+import com.kinomora.Recipe;
 import com.sun.xml.internal.messaging.saaj.soap.JpegDataContentHandler;
 
 import javax.swing.*;
@@ -15,7 +17,7 @@ public class ItemDescPanel extends JPanel {
 
     public ItemDescPanel() {
         super(new BorderLayout());
-        this.border = BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.BLACK, 3, true), "Item");
+        this.border = BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.BLACK, 2, true), "Item");
         this.setBorder(border);
     }
 
@@ -30,23 +32,41 @@ public class ItemDescPanel extends JPanel {
 
         if (this.type == null) {
             this.type = type;
-            this.setItemName(type.getIcon(), type.name);
-            this.setItemDesc(type.description);
+            this.setItemName();
+            this.setItemDesc();
             this.setItemStats();
             this.updateUI();
         }
     }
 
-    private void setItemName(Icon icon, String name) {
-        this.add(new JLabel(icon, SwingConstants.LEADING), BorderLayout.PAGE_START);
-        this.border.setTitle(name);
+    private void setItemName() {
+        // Change the code here to add the recipe for the item where result = item + item
+        // get the recipe from recipe checker
+        // add a panel and add all items here to it
+
+        //Get the recipe for the item we are display
+        Recipe recipe = CraftingManager.getRecipe(type);
+
+        JPanel recipeDisplay = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        //Add the output item
+        recipeDisplay.add(new JLabel(this.type.getIcon(), SwingConstants.LEADING));
+
+        //Check if there is no recipe
+        if(recipe != null){
+            recipeDisplay.add(new JLabel(" = "));
+            recipeDisplay.add(new JLabel(recipe.input1.getIcon(), SwingConstants.LEADING));
+            recipeDisplay.add(new JLabel(" + "));
+            recipeDisplay.add(new JLabel(recipe.input2.getIcon(), SwingConstants.LEADING));
+        }
+        this.add(recipeDisplay, BorderLayout.PAGE_START);
+        this.border.setTitle(this.type.name);
     }
 
-    private void setItemDesc(String desc) {
+    private void setItemDesc() {
         JTextArea description = new JTextArea();
         description.setLayout(new BorderLayout());
         description.setEnabled(false);
-        description.setText(desc);
+        description.setText(this.type.description);
         description.setBorder(new TitledBorder("Description"));
         description.setWrapStyleWord(true);
         description.setEditable(false);

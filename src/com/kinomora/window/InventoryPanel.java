@@ -17,7 +17,7 @@ public class InventoryPanel extends JPanel {
     public InventoryPanel(ItemDescPanel itemDescPanel) {
         super(new GridLayout(5, 2));
         this.setBorder(BorderFactory.createTitledBorder(
-                BorderFactory.createLineBorder(Color.BLACK, 3, true),
+                BorderFactory.createLineBorder(Color.BLACK, 2, true),
                 "Inventory",
                 TitledBorder.DEFAULT_JUSTIFICATION,
                 TitledBorder.DEFAULT_POSITION,
