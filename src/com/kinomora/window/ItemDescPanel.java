@@ -1,19 +1,22 @@
 package com.kinomora.window;
 
 import com.kinomora.ItemType;
+import com.sun.xml.internal.messaging.saaj.soap.JpegDataContentHandler;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 
 public class ItemDescPanel extends JPanel {
 
     public ItemType type;
+    public TitledBorder border;
 
     public ItemDescPanel() {
         super(new BorderLayout());
-
-        this.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.BLACK, 3, true), "Item"));
+        this.border = BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.BLACK, 3, true), "Item");
+        this.setBorder(border);
     }
 
     public void setItemInfo(ItemType type) {
@@ -35,25 +38,32 @@ public class ItemDescPanel extends JPanel {
     }
 
     private void setItemName(Icon icon, String name) {
-        this.add(new JLabel(name, icon, SwingConstants.LEADING), BorderLayout.PAGE_START, 0);
+        this.add(new JLabel(icon, SwingConstants.LEADING), BorderLayout.PAGE_START);
+        this.border.setTitle(name);
     }
 
     private void setItemDesc(String desc) {
-        JTextPane description = new JTextPane();
+        JTextArea description = new JTextArea();
         description.setLayout(new BorderLayout());
         description.setEnabled(false);
         description.setText(desc);
         description.setBorder(new TitledBorder("Description"));
-        this.add(description, BorderLayout.LINE_START, 1);
+        description.setWrapStyleWord(true);
+        description.setEditable(false);
+        description.setLineWrap(true);
+        description.setOpaque(false);
+        this.add(description);
+
+        this.add(new ChampionPanel(), BorderLayout.SOUTH);
     }
 
     private void setItemStats() {
         StatsPanel statsPanel = new StatsPanel();
-        this.add(statsPanel, BorderLayout.EAST, 2);
     }
 
     private void removeItemInfo() {
         this.removeAll();
         this.updateUI();
+        this.border.setTitle("Item");
     }
 }

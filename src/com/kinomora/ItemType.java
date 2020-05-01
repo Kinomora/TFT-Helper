@@ -24,7 +24,6 @@ public class ItemType {
 
     public Icon getIcon(){
         File file = new File(FileManager.resources,"icons/"+this.id+".png");
-        System.out.println(file.getPath());
         return new ImageIcon(file.getPath());
     }
 
