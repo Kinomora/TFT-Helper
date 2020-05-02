@@ -23,6 +23,10 @@ public class ItemType {
         this.description = description;
     }
 
+    public boolean isBasic() {
+        return CraftingManager.getRecipe(this) == null;
+    }
+
     public static ItemType getItemTypeFromName(String name) {
         return REGISTERED.get(name);
     }
@@ -31,7 +35,7 @@ public class ItemType {
         return REGISTERED.get(itemIDLookup.get(name));
     }
 
-    public Icon getIcon(){
+    public TintedIcon getIcon(){
         File file = new File(FileManager.resources,"icons/"+this.id+".png");
         return new TintedIcon(file.getPath());
     }

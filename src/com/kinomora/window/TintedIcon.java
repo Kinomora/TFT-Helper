@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 
 public class TintedIcon extends ImageIcon {
 
-    public BufferedImage tintedImage;
+    private BufferedImage tintedImage;
     private boolean shouldTint = false;
 
     public TintedIcon(String filename) {
@@ -18,12 +18,12 @@ public class TintedIcon extends ImageIcon {
         this.tintedImage = new BufferedImage(img.getWidth(), img.getHeight(), img.getType());
         for (int i = 0; i < this.tintedImage.getWidth(); i++) {
             for (int j = 0; j < this.tintedImage.getHeight(); j++) {
-                this.tintedImage.setRGB(i, j, new Color(img.getRGB(i, j), true).darker().darker().getRGB());
+                this.tintedImage.setRGB(i, j, new Color(img.getRGB(i, j), true).darker().darker().darker().darker().getRGB());
             }
         }
     }
 
-    public void shouldTint(boolean shouldTint) {
+    public void tint(boolean shouldTint) {
         this.shouldTint = shouldTint;
     }
 

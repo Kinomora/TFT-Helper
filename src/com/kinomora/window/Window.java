@@ -29,7 +29,7 @@ public class Window extends JFrame implements KeyListener {
 
         //Add the tabs to the main window
         tabs.addTab("Game", gameOverviewTab.getGameTab());
-        tabs.addTab("Items", itemsOverviewTab.getItemsTab());
+        tabs.addTab("Items", itemsOverviewTab);
         tabs.addTab("Champions", championsOverviewTab.getGameTab());
 
         //???

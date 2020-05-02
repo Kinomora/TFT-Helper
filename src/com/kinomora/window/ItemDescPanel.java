@@ -3,6 +3,7 @@ package com.kinomora.window;
 import com.kinomora.CraftingManager;
 import com.kinomora.ItemType;
 import com.kinomora.Recipe;
+import com.kinomora.window.overview.ItemsOverviewTab;
 import com.sun.xml.internal.messaging.saaj.soap.JpegDataContentHandler;
 
 import javax.swing.*;
@@ -12,11 +13,13 @@ import java.awt.*;
 
 public class ItemDescPanel extends JPanel {
 
+    public final ItemsOverviewTab parent;
     public ItemType type;
     public TitledBorder border;
 
-    public ItemDescPanel() {
+    public ItemDescPanel(ItemsOverviewTab parent) {
         super(new BorderLayout());
+        this.parent = parent;
         this.border = BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.BLACK, 2, true), "Item");
         this.setBorder(border);
     }
@@ -34,7 +37,6 @@ public class ItemDescPanel extends JPanel {
             this.type = type;
             this.setItemName();
             this.setItemDesc();
-            this.setItemStats();
             this.updateUI();
         }
     }
@@ -75,10 +77,6 @@ public class ItemDescPanel extends JPanel {
         this.add(description);
 
         this.add(new ChampionPanel(), BorderLayout.SOUTH);
-    }
-
-    private void setItemStats() {
-        StatsPanel statsPanel = new StatsPanel();
     }
 
     private void removeItemInfo() {

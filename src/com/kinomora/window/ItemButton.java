@@ -2,7 +2,7 @@ package com.kinomora.window;
 
 import com.kinomora.CraftingManager;
 import com.kinomora.ItemType;
-import com.kinomora.Recipe;
+import com.kinomora.window.overview.ItemsOverviewTab;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,23 +10,20 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.image.BufferedImage;
 
 public class ItemButton extends JButton implements ActionListener, MouseListener {
 
     public ItemType type;
     public final boolean isInventory;
-    public final ItemDescPanel itemDescPanel;
-    public final InventoryPanel inventoryPanel;
+    public final ItemsOverviewTab itemsTab;
     public final int index;
     private boolean hasMouseExited;
 
-    public ItemButton(int index, boolean isInventory, ItemDescPanel itemDescPanel, InventoryPanel inventoryPanel) {
+    public ItemButton(int index, boolean isInventory, ItemsOverviewTab itemsTab) {
         //local variables
-        this.isInventory = isInventory;
-        this.itemDescPanel = itemDescPanel;
-        this.inventoryPanel = inventoryPanel;
         this.index = index;
+        this.isInventory = isInventory;
+        this.itemsTab = itemsTab;
 
         //Listeners
         this.addMouseListener(this);
@@ -42,8 +39,7 @@ public class ItemButton extends JButton implements ActionListener, MouseListener
         if (type == null) {
             this.setEnabled(false);
             this.setIcon(new ImageIcon("empty.png"));
-        }
-        else {
+        } else {
             this.setEnabled(true);
             this.setIcon(type.getIcon());
         }
@@ -59,12 +55,12 @@ public class ItemButton extends JButton implements ActionListener, MouseListener
     //Mouse listener events
     @Override
     public void mouseEntered(MouseEvent e) {
-        this.itemDescPanel.setItemInfo(this.type);
+        this.itemsTab.itemDescPanel.setItemInfo(this.type);
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        this.itemDescPanel.setItemInfo(null);
+        this.itemsTab.itemDescPanel.setItemInfo(null);
         this.hasMouseExited = true;
     }
 
@@ -83,24 +79,23 @@ public class ItemButton extends JButton implements ActionListener, MouseListener
             //Left click is add-to-inventory, no crafting
             if (e.getButton() == MouseEvent.BUTTON1) {
                 if (isInventory) {
-                    this.inventoryPanel.removeItem(index);
-                    this.itemDescPanel.setItemInfo(null);
-                }
-                else {
-                    this.inventoryPanel.addItem(type);
+                    this.itemsTab.inventoryPanel.removeItem(index);
+                    this.itemsTab.itemDescPanel.setItemInfo(null);
+                } else {
+                    this.itemsTab.inventoryPanel.addItem(type);
                 }
             }
         }
 
         //Right click is craft item from inventory items
-        if(e.getButton() == MouseEvent.BUTTON3)
-        {
-            //Create a recipe object for the itemType that we are hovering over
-            Recipe recipeForItem = CraftingManager.getRecipe(type);
-
+        if (e.getButton() == MouseEvent.BUTTON3) {
             //Check if the inventory has the items needed to craft this item
-            CraftingManager.craft(this.inventoryPanel.inventory, type);
-                inventoryPanel.sortInventory();
+            CraftingManager.craft(this.itemsTab.inventoryPanel.inventory, type);
+            this.itemsTab.inventoryPanel.sortInventory();
         }
+    }
+
+    public void setCraftable(boolean isCraftable) {
+        ((TintedIcon)this.getIcon()).tint(!isCraftable);
     }
 }
