@@ -1,5 +1,7 @@
 package com.kinomora;
 
+import com.kinomora.window.TintedIcon;
+
 import javax.swing.*;
 import java.io.File;
 import java.util.HashMap;
@@ -31,7 +33,7 @@ public class ItemType {
 
     public Icon getIcon(){
         File file = new File(FileManager.resources,"icons/"+this.id+".png");
-        return new ImageIcon(file.getPath());
+        return new TintedIcon(file.getPath());
     }
 
     //Returns the name of the itemtype
