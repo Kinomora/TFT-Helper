@@ -1,8 +1,9 @@
-package com.kinomora.window;
+package com.kinomora.window.overview.itemstab;
 
 import com.kinomora.Inventory;
 import com.kinomora.Item;
 import com.kinomora.ItemType;
+import com.kinomora.window.ItemButton;
 import com.kinomora.window.overview.ItemsOverviewTab;
 import com.sun.org.apache.xpath.internal.objects.XBoolean;
 

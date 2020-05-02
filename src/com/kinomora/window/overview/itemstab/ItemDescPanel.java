@@ -1,13 +1,11 @@
-package com.kinomora.window;
+package com.kinomora.window.overview.itemstab;
 
 import com.kinomora.CraftingManager;
 import com.kinomora.ItemType;
 import com.kinomora.Recipe;
 import com.kinomora.window.overview.ItemsOverviewTab;
-import com.sun.xml.internal.messaging.saaj.soap.JpegDataContentHandler;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 

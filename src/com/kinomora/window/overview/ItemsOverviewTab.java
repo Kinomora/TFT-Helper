@@ -1,8 +1,8 @@
 package com.kinomora.window.overview;
 
-import com.kinomora.window.InventoryPanel;
-import com.kinomora.window.ItemDescPanel;
-import com.kinomora.window.ItemsPanel;
+import com.kinomora.window.overview.itemstab.InventoryPanel;
+import com.kinomora.window.overview.itemstab.ItemDescPanel;
+import com.kinomora.window.overview.itemstab.ItemsPanel;
 
 import javax.swing.*;
 import java.awt.*;

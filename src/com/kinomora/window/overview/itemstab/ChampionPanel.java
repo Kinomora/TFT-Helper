@@ -1,4 +1,4 @@
-package com.kinomora.window;
+package com.kinomora.window.overview.itemstab;
 
 import com.kinomora.Inventory;
 

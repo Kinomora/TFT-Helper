@@ -1,6 +1,7 @@
-package com.kinomora.window;
+package com.kinomora.window.overview.itemstab;
 
 import com.kinomora.*;
+import com.kinomora.window.ItemButton;
 import com.kinomora.window.overview.ItemsOverviewTab;
 
 import javax.swing.*;
