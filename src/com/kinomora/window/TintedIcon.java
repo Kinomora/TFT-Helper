@@ -18,7 +18,7 @@ public class TintedIcon extends ImageIcon {
         this.tintedImage = new BufferedImage(img.getWidth(), img.getHeight(), img.getType());
         for (int i = 0; i < this.tintedImage.getWidth(); i++) {
             for (int j = 0; j < this.tintedImage.getHeight(); j++) {
-                this.tintedImage.setRGB(i, j, new Color(img.getRGB(i, j), true).darker().darker().darker().darker().getRGB());
+                this.tintedImage.setRGB(i, j, new Color(img.getRGB(i, j), true).darker().darker().darker().getRGB());
             }
         }
     }

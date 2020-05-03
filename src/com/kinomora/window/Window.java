@@ -28,9 +28,9 @@ public class Window extends JFrame implements KeyListener {
         ChampionsOverviewTab championsOverviewTab = new ChampionsOverviewTab();
 
         //Add the tabs to the main window
-        tabs.addTab("Game", gameOverviewTab.getGameTab());
+        /*tabs.addTab("Game", gameOverviewTab.getGameTab());*/
         tabs.addTab("Items", itemsOverviewTab);
-        tabs.addTab("Champions", championsOverviewTab.getGameTab());
+        /*tabs.addTab("Champions", championsOverviewTab.getGameTab());*/
 
         //???
         this.setContentPane(tabs);
