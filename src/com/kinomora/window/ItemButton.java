@@ -6,12 +6,23 @@ import com.kinomora.window.overview.ItemsOverviewTab;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.color.ColorSpace;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.image.BufferedImage;
 
 public class ItemButton extends JButton implements ActionListener, MouseListener {
+
+    public static final float INV_ICON_SCALE = 0.7f;
+    public static final float ITEMS_ICON_SCALE = 0.7f;
+    public static final ImageIcon EMPTY_ICON = new ImageIcon();
+
+    static {
+        BufferedImage img = new BufferedImage(64, 64, BufferedImage.TYPE_BYTE_GRAY);
+        EMPTY_ICON.setImage(img.getScaledInstance((int)(INV_ICON_SCALE * img.getWidth()), (int)(INV_ICON_SCALE * img.getHeight()), Image.SCALE_SMOOTH));
+    }
 
     public ItemType type;
     public final boolean isInventory;
@@ -31,17 +42,19 @@ public class ItemButton extends JButton implements ActionListener, MouseListener
 
         //object configuration
         this.setMargin(new Insets(0, 0, 0, 0));
-        this.setIcon(new ImageIcon("empty.png"));
+        this.setIcon(EMPTY_ICON);
         this.setEnabled(false);
     }
 
     public void setType(ItemType type) {
         if (type == null) {
             this.setEnabled(false);
-            this.setIcon(new ImageIcon("empty.png"));
+            this.setIcon(EMPTY_ICON);
         } else {
+            float scale = isInventory ? INV_ICON_SCALE : ITEMS_ICON_SCALE;
+
             this.setEnabled(true);
-            this.setIcon(type.getIcon());
+            this.setIcon(type.getIcon(scale));
         }
         this.type = type;
     }

@@ -3,6 +3,7 @@ package com.kinomora;
 import com.kinomora.window.TintedIcon;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
@@ -35,9 +36,11 @@ public class ItemType {
         return REGISTERED.get(itemIDLookup.get(name));
     }
 
-    public TintedIcon getIcon(){
+    public TintedIcon getIcon(float scale){
         File file = new File(FileManager.resources,"icons/"+this.id+".png");
-        return new TintedIcon(file.getPath());
+        TintedIcon icon = new TintedIcon(file.getPath());
+        icon.setImage(icon.getImage().getScaledInstance((int)(scale * icon.getIconWidth()), (int)(scale * icon.getIconHeight()), Image.SCALE_SMOOTH));
+        return icon;
     }
 
     //Returns the name of the itemtype

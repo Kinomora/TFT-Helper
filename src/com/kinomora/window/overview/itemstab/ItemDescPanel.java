@@ -49,14 +49,14 @@ public class ItemDescPanel extends JPanel {
 
         JPanel recipeDisplay = new JPanel(new FlowLayout(FlowLayout.LEFT));
         //Add the output item
-        recipeDisplay.add(new JLabel(this.type.getIcon(), SwingConstants.LEADING));
+        recipeDisplay.add(new JLabel(this.type.getIcon(ItemButton.INV_ICON_SCALE), SwingConstants.LEADING));
 
         //Check if there is no recipe
         if(recipe != null){
             recipeDisplay.add(new JLabel(" = "));
-            recipeDisplay.add(new JLabel(recipe.input1.getIcon(), SwingConstants.LEADING));
+            recipeDisplay.add(new JLabel(recipe.input1.getIcon(ItemButton.INV_ICON_SCALE), SwingConstants.LEADING));
             recipeDisplay.add(new JLabel(" + "));
-            recipeDisplay.add(new JLabel(recipe.input2.getIcon(), SwingConstants.LEADING));
+            recipeDisplay.add(new JLabel(recipe.input2.getIcon(ItemButton.INV_ICON_SCALE), SwingConstants.LEADING));
         }
         this.add(recipeDisplay, BorderLayout.PAGE_START);
         this.border.setTitle(this.type.name);
