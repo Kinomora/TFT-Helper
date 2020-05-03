@@ -1,12 +1,15 @@
 package com.kinomora;
 
+import com.kinomora.window.ItemButton;
 import com.kinomora.window.TintedIcon;
 
+import javax.imageio.ImageIO;
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.*;
 
 //These objects are unique items types, and is what creates the item object
 public class ItemType {
@@ -38,9 +41,14 @@ public class ItemType {
     }
 
     public TintedIcon getIcon(float scale){
-        File file = new File(FileManager.resources,"icons/"+this.id+".png");
-        TintedIcon icon = new TintedIcon(file.getPath(), scale);
-        return icon;
+        try {
+            InputStream inputStream = Main.class.getClassLoader().getResourceAsStream("icons/"+this.id+".png");
+            TintedIcon icon = new TintedIcon(ImageIO.read(inputStream), scale);
+            return icon;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     //Returns the name of the itemtype

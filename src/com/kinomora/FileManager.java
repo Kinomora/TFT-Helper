@@ -6,6 +6,8 @@ import com.google.gson.stream.JsonReader;
 
 import java.io.File;
 import java.io.FileReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class FileManager {
     public static File resources = new File("resources");
@@ -13,8 +15,8 @@ public class FileManager {
 
     //Load the items from the items.json file
     public static void loadItems() throws Exception {
-        File itemsFile = new File(resources, "items.json");
-        JsonReader jsonReader = new JsonReader(new FileReader(itemsFile));
+        InputStream itemStream = Main.class.getClassLoader().getResourceAsStream("items.json");
+        JsonReader jsonReader = new JsonReader(new InputStreamReader(itemStream));
 
         //loads entire items.json file as a json array object
         JsonArray jsonArray = gson.fromJson(jsonReader, JsonArray.class);
@@ -34,8 +36,8 @@ public class FileManager {
 
     //Load the recipes from the recipes.json file
     public static void loadRecipes() throws Exception {
-        File recipesFile = new File(resources, "recipes.json");
-        JsonReader jsonReader = new JsonReader(new FileReader(recipesFile));
+        InputStream recipeStream = Main.class.getClassLoader().getResourceAsStream("recipes.json");
+        JsonReader jsonReader = new JsonReader(new InputStreamReader(recipeStream));
 
         //loads entire recipes.json file as a json array object
         JsonArray jsonArray = gson.fromJson(jsonReader, JsonArray.class);

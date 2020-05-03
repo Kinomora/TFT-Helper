@@ -11,8 +11,8 @@ public class TintedIcon extends ImageIcon {
     private BufferedImage tintedImage;
     private boolean shouldTint = false;
 
-    public TintedIcon(String filename, float scale) {
-        super(filename);
+    public TintedIcon(Image image, float scale) {
+        super(image);
         this.setImage(this.getImage().getScaledInstance((int)(scale * this.getIconWidth()), (int)(scale * this.getIconHeight()), Image.SCALE_SMOOTH));
         BufferedImage img = ((ToolkitImage) this.getImage()).getBufferedImage();
         this.tintedImage = new BufferedImage(img.getWidth(), img.getHeight(), img.getType());
