@@ -4,6 +4,7 @@ import com.kinomora.window.Window;
 
 import javax.swing.*;
 import java.io.File;
+import java.net.Inet4Address;
 
 public class Main {
 
@@ -17,21 +18,13 @@ public class Main {
         FileManager.loadItems();
 
         //load the recipes from recipes.json - must be done after items
-        //FileManager.loadRecipes();
+        FileManager.loadRecipes();
 
         //Set up the GUI window - must be done after loading items and recipes
         Window window = new Window("TFT Helper - Set 3");
         window.pack();
-        window.setSize(687, 902);
+        window.setSize(696, 902);
         window.setResizable(false);
         window.setVisible(true);
-
-        //Print inventory and craftable
-        /*System.out.println("Current Inventory: " + inventory);
-        System.out.println("");
-        System.out.println("Craftable items:");
-        for (Recipe recipe : CraftingManager.getAllCraftables(inventory)) {
-            System.out.println(recipe);
-        }*/
     }
 }

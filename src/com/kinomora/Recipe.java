@@ -7,6 +7,7 @@ public class Recipe {
     public final ItemType input2;
 
     public Recipe(ItemType output, ItemType input1, ItemType input2) {
+
         this.output = output;
         this.input1 = input1;
         this.input2 = input2;

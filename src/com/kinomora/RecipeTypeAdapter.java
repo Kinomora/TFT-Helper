@@ -8,15 +8,16 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
 public class RecipeTypeAdapter extends TypeAdapter<Recipe> {
+
     @Override
     public Recipe read(JsonReader jsonReader) throws IOException {
         JsonObject recipeJsonObject = FileManager.gson.fromJson(jsonReader, JsonObject.class);
 
-        ItemType outputItem = ItemType.get(recipeJsonObject.get("Output").getAsString());
-        ItemType inputItem1 = ItemType.get(recipeJsonObject.getAsJsonArray("Inputs").get(0).getAsString());
-        ItemType inputItem2 = ItemType.get(recipeJsonObject.getAsJsonArray("Inputs").get(1).getAsString());
+        ItemType outputItemID = ItemType.getIDFromName(recipeJsonObject.get("Output").getAsString());
+        ItemType inputItem1ID = ItemType.getIDFromName(recipeJsonObject.getAsJsonArray("Inputs").get(0).getAsString());
+        ItemType inputItem2ID = ItemType.getIDFromName(recipeJsonObject.getAsJsonArray("Inputs").get(1).getAsString());
 
-        return new Recipe(outputItem, inputItem1, inputItem2);
+        return new Recipe(outputItemID, inputItem1ID, inputItem2ID);
     }
 
     @Override

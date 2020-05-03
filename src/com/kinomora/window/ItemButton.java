@@ -1,74 +1,84 @@
 package com.kinomora.window;
 
-import com.kinomora.Inventory;
+import com.kinomora.CraftingManager;
 import com.kinomora.ItemType;
+import com.kinomora.window.overview.ItemsOverviewTab;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.color.ColorSpace;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.image.BufferedImage;
 
 public class ItemButton extends JButton implements ActionListener, MouseListener {
 
+    public static final float INV_ICON_SCALE = 0.7f;
+    public static final float ITEMS_ICON_SCALE = 0.7f;
+    public static final ImageIcon EMPTY_ICON = new ImageIcon();
+
+    static {
+        BufferedImage img = new BufferedImage(64, 64, BufferedImage.TYPE_BYTE_GRAY);
+        EMPTY_ICON.setImage(img.getScaledInstance((int)(INV_ICON_SCALE * img.getWidth()), (int)(INV_ICON_SCALE * img.getHeight()), Image.SCALE_SMOOTH));
+    }
+
     public ItemType type;
     public final boolean isInventory;
-    public final ItemDescPanel itemDescPanel;
-    public final InventoryPanel inventoryPanel;
+    public final ItemsOverviewTab itemsTab;
     public final int index;
+    private boolean hasMouseExited;
 
-    public ItemButton(int index, boolean isInventory, ItemDescPanel itemDescPanel, InventoryPanel inventoryPanel) {
-        this.setMargin(new Insets(0, 0, 0, 0));
-        this.setIcon(new ImageIcon("empty.png"));
-        this.setEnabled(false);
+    public ItemButton(int index, boolean isInventory, ItemsOverviewTab itemsTab) {
+        //local variables
+        this.index = index;
         this.isInventory = isInventory;
-        this.itemDescPanel = itemDescPanel;
+        this.itemsTab = itemsTab;
+
+        //Listeners
         this.addMouseListener(this);
         this.addActionListener(this);
-        this.inventoryPanel = inventoryPanel;
-        this.index = index;
+
+        //object configuration
+        this.setMargin(new Insets(0, 0, 0, 0));
+        this.setIcon(EMPTY_ICON);
+        this.setEnabled(false);
     }
 
     public void setType(ItemType type) {
         if (type == null) {
             this.setEnabled(false);
-            this.setIcon(new ImageIcon("empty.png"));
-        }
-        else {
+            this.setIcon(EMPTY_ICON);
+        } else {
+            float scale = isInventory ? INV_ICON_SCALE : ITEMS_ICON_SCALE;
+
             this.setEnabled(true);
-            this.setIcon(type.getIcon());
+            this.setIcon(type.getIcon(scale));
         }
         this.type = type;
-
     }
 
     //Action Listener events
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (isInventory) {
-            this.inventoryPanel.removeItem(index);
-            this.itemDescPanel.setItemInfo(null);
-        }
-        else {
-            this.inventoryPanel.addItem(type);
-        }
+        this.hasMouseExited = false;
     }
 
     //Mouse listener events
     @Override
     public void mouseEntered(MouseEvent e) {
-        this.itemDescPanel.setItemInfo(this.type);
+        this.itemsTab.itemDescPanel.setItemInfo(this.type);
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        this.itemDescPanel.setItemInfo(null);
+        this.itemsTab.itemDescPanel.setItemInfo(null);
+        this.hasMouseExited = true;
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
     }
 
     @Override
@@ -78,6 +88,27 @@ public class ItemButton extends JButton implements ActionListener, MouseListener
 
     @Override
     public void mouseReleased(MouseEvent e) {
+        if (!hasMouseExited) {
+            //Left click is add-to-inventory, no crafting
+            if (e.getButton() == MouseEvent.BUTTON1) {
+                if (isInventory) {
+                    this.itemsTab.inventoryPanel.removeItem(index);
+                    this.itemsTab.itemDescPanel.setItemInfo(null);
+                } else {
+                    this.itemsTab.inventoryPanel.addItem(type);
+                }
+            }
+        }
 
+        //Right click is craft item from inventory items
+        if (e.getButton() == MouseEvent.BUTTON3) {
+            //Check if the inventory has the items needed to craft this item
+            CraftingManager.craft(this.itemsTab.inventoryPanel.inventory, type);
+            this.itemsTab.inventoryPanel.sortInventory();
+        }
+    }
+
+    public void setCraftable(boolean isCraftable) {
+        ((TintedIcon)this.getIcon()).tint(!isCraftable);
     }
 }

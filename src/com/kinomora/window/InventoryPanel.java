@@ -3,6 +3,7 @@ package com.kinomora.window;
 import com.kinomora.Inventory;
 import com.kinomora.Item;
 import com.kinomora.ItemType;
+import com.kinomora.window.overview.ItemsOverviewTab;
 import com.sun.org.apache.xpath.internal.objects.XBoolean;
 
 import javax.swing.*;
@@ -11,13 +12,15 @@ import java.awt.*;
 
 public class InventoryPanel extends JPanel {
 
+    public final ItemsOverviewTab parent;
     public final Inventory inventory = new Inventory();
     public final ItemButton[] buttonsArray = new ItemButton[10];
 
-    public InventoryPanel(ItemDescPanel itemDescPanel) {
+    public InventoryPanel(ItemsOverviewTab parent) {
         super(new GridLayout(5, 2));
+        this.parent = parent;
         this.setBorder(BorderFactory.createTitledBorder(
-                BorderFactory.createLineBorder(Color.BLACK, 3, true),
+                BorderFactory.createLineBorder(Color.BLACK, 2, true),
                 "Inventory",
                 TitledBorder.DEFAULT_JUSTIFICATION,
                 TitledBorder.DEFAULT_POSITION,
@@ -25,7 +28,7 @@ public class InventoryPanel extends JPanel {
         ));
 
         for (int i = 0; i < 10; i++) {
-            ItemButton button = new ItemButton(i, true, itemDescPanel, this);
+            ItemButton button = new ItemButton(i, true, parent);
             //adds each button to an arraylist of buttons
             buttonsArray[i] = button;
 
@@ -47,6 +50,8 @@ public class InventoryPanel extends JPanel {
             //set any button in the inventory panel to empty if there is not item in that inventory slot
             buttonsArray[i].setType(null);
         }
+
+        this.parent.itemsPanel.updateItems();
     }
 
     public void addItem(ItemType itemType) {
