@@ -37,7 +37,6 @@ public class ItemsPanel extends JPanel {
      */
     private void populateItems() {
         //Adds all items from the /resources/icons folder to the bottomPanel
-        for (int i = 0; i < 2; i++)
         for (File icon : Objects.requireNonNull(new File(FileManager.resources, "icons").listFiles())) {
             ItemButton item = new ItemButton(0, false, this.parent);
             ItemType type = ItemType.getItemTypeFromName(icon.getName().substring(0, icon.getName().indexOf('.')));

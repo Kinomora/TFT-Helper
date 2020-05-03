@@ -23,7 +23,7 @@ public class Main {
         //Set up the GUI window - must be done after loading items and recipes
         Window window = new Window("TFT Helper - Set 3");
         window.pack();
-        window.setSize(696, 902);
+        window.setSize(568, 890);
         window.setResizable(false);
         window.setVisible(true);
     }

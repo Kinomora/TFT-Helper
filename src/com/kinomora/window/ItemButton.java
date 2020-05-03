@@ -20,7 +20,7 @@ public class ItemButton extends JButton implements ActionListener, MouseListener
     public static final ImageIcon EMPTY_ICON = new ImageIcon();
 
     static {
-        BufferedImage img = new BufferedImage(64, 64, BufferedImage.TYPE_BYTE_GRAY);
+        BufferedImage img = new BufferedImage(64, 64, BufferedImage.TYPE_INT_ARGB);
         EMPTY_ICON.setImage(img.getScaledInstance((int)(INV_ICON_SCALE * img.getWidth()), (int)(INV_ICON_SCALE * img.getHeight()), Image.SCALE_SMOOTH));
     }
 

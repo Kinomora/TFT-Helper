@@ -1,5 +1,10 @@
 [
     {
+        "ID": "00",
+        "Name": "Neeko's Help",
+        "Description": "Place on a champion, pulls a 1-star unit of that champion from the pool and add it to your bench."
+    },
+    {
         "ID": "01",
         "Name": "B.F. Sword",
         "Description": "+15 Attack Damage"
@@ -36,13 +41,13 @@
     },
     {
         "ID": "08",
-        "Name": "Spatula",
-        "Description": "You will get a special ability"
+        "Name": "Sparring Gloves",
+        "Description": "+10% Dodge change, +10% Crit chance"
     },
     {
         "ID": "09",
-        "Name": "Sparring Gloves",
-        "Description": "+10% Dodge change, +10% Crit chance"
+        "Name": "Spatula",
+        "Description": "You will get a special ability"
     },
     {
         "ID": "11",

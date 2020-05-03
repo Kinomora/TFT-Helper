@@ -38,8 +38,7 @@ public class ItemType {
 
     public TintedIcon getIcon(float scale){
         File file = new File(FileManager.resources,"icons/"+this.id+".png");
-        TintedIcon icon = new TintedIcon(file.getPath());
-        icon.setImage(icon.getImage().getScaledInstance((int)(scale * icon.getIconWidth()), (int)(scale * icon.getIconHeight()), Image.SCALE_SMOOTH));
+        TintedIcon icon = new TintedIcon(file.getPath(), scale);
         return icon;
     }
 
