@@ -1,16 +1,18 @@
 package com.kinomora.window.overview.itemstab;
 
-import com.kinomora.*;
+import com.kinomora.CraftingManager;
+import com.kinomora.Inventory;
+import com.kinomora.ItemType;
+import com.kinomora.Recipe;
 import com.kinomora.window.ItemButton;
 import com.kinomora.window.overview.ItemsOverviewTab;
-import no.stelar7.api.r4j.basic.utils.Pair;
+import javafx.util.Pair;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
-import java.io.File;
-import java.util.*;
 import java.util.List;
+import java.util.*;
 
 public class ItemsPanel extends JPanel {
 
@@ -71,7 +73,7 @@ public class ItemsPanel extends JPanel {
             return;
         }
 
-        pair.setValue(button);
+        this.BUTTONS.put(button.type, new Pair<>(pair.getKey(), button));
     }
 
     public void updateItems() {
