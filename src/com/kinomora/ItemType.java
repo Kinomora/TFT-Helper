@@ -2,18 +2,19 @@ package com.kinomora;
 
 import com.kinomora.window.TintedIcon;
 
-import javax.swing.*;
-import java.awt.*;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 //These objects are unique items types, and is what creates the item object
 public class ItemType {
     //Map<String(ItemID), String(ItemName)
-    public final static Map<String, String> itemIDLookup = new HashMap<>();
+    public static final Map<String, String> itemIDLookup = new HashMap<>();
     //Map<String(ItemName), ItemType(object)
-    public final static Map<String, ItemType> REGISTERED = new HashMap<>();
+    public static final Map<String, ItemType> REGISTERED = new HashMap<>();
+    public static final List<ItemType> BASIC_TYPES = new ArrayList<>();
     public final String id;
     public final String name;
     public final String description;

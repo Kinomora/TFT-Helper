@@ -111,4 +111,10 @@ public class ItemButton extends JButton implements ActionListener, MouseListener
     public void setCraftable(boolean isCraftable) {
         ((TintedIcon)this.getIcon()).tint(!isCraftable);
     }
+
+    public ItemButton copy() {
+        ItemButton copy = new ItemButton(this.index, this.isInventory, this.itemsTab);
+        copy.setType(this.type);
+        return copy;
+    }
 }

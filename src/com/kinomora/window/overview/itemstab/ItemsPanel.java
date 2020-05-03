@@ -3,17 +3,19 @@ package com.kinomora.window.overview.itemstab;
 import com.kinomora.*;
 import com.kinomora.window.ItemButton;
 import com.kinomora.window.overview.ItemsOverviewTab;
+import no.stelar7.api.r4j.basic.utils.Pair;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.io.File;
 import java.util.*;
+import java.util.List;
 
 public class ItemsPanel extends JPanel {
 
     public final ItemsOverviewTab parent;
-    private final Map<ItemType, ItemButton> BUTTONS;
+    private final Map<ItemType, Pair<ItemButton, ItemButton>> BUTTONS;
 
     public ItemsPanel(ItemsOverviewTab parent) {
         this.parent = parent;
@@ -36,15 +38,40 @@ public class ItemsPanel extends JPanel {
      * Adds all the item icons inside this panel
      */
     private void populateItems() {
-        //Adds all items from the /resources/icons folder to the bottomPanel
-        for (File icon : Objects.requireNonNull(new File(FileManager.resources, "icons").listFiles())) {
-            ItemButton item = new ItemButton(0, false, this.parent);
-            ItemType type = ItemType.getItemTypeFromName(icon.getName().substring(0, icon.getName().indexOf('.')));
-            item.setType(type);
-            item.setMargin(new Insets(0, 0, 0, 0));
-            BUTTONS.put(type, item);
-            this.add(item);
+        List<ItemType> basicTypes = ItemType.BASIC_TYPES;
+        for (int y = 0; y < basicTypes.size(); y++) {
+            ItemType left = basicTypes.get(y);
+            for (int x = 0; x < basicTypes.size(); x++) {
+                ItemType top = basicTypes.get(x);
+
+                ItemButton button = new ItemButton(0, false, this.parent);
+
+                if (x == 0) {               // is first row (basic type)
+                    button.setType(left);
+                } else if (y == 0) {        // if first column (basic type)
+                    button.setType(top);
+                } else {
+                    button.setType(CraftingManager.getRecipe(top, left).output);
+                }
+
+                System.out.println("Adding item " + button.type + " to slot (" + x + ", " + y + ")");
+
+                this.storeItemButton(button);
+                this.add(button);
+            }
         }
+    }
+
+    public void storeItemButton(ItemButton button) {
+        Pair<ItemButton, ItemButton> pair = BUTTONS.get(button.type);
+
+        if (pair == null) {
+            pair = new Pair<>(button, null);
+            this.BUTTONS.put(button.type, pair);
+            return;
+        }
+
+        pair.setValue(button);
     }
 
     public void updateItems() {
@@ -55,14 +82,18 @@ public class ItemsPanel extends JPanel {
             craftableItems.add(recipe.output);
         }
 
-        for (Map.Entry<ItemType, ItemButton> entry : BUTTONS.entrySet()) {
+        for (Map.Entry<ItemType, Pair<ItemButton, ItemButton>> entry : BUTTONS.entrySet()) {
             ItemType type = entry.getKey();
-            ItemButton button = entry.getValue();
+            Pair<ItemButton, ItemButton> button = entry.getValue();
+
             if (type.isBasic()) {
                 continue;
             }
 
-            button.setCraftable(craftableItems.contains(type));
+            button.getKey().setCraftable(craftableItems.contains(type));
+            if (button.getValue() != null) {
+                button.getValue().setCraftable(craftableItems.contains(type));
+            }
         }
 
         this.updateUI();

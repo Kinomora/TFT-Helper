@@ -12,7 +12,7 @@ public class FileManager {
     public static Gson gson = new GsonBuilder().registerTypeAdapter(Recipe.class, new RecipeTypeAdapter()).registerTypeAdapter(ItemType.class, new ItemTypeTypeAdapter()).create();
 
     //Load the items from the items.json file
-    public static void loadItems() throws Exception{
+    public static void loadItems() throws Exception {
         File itemsFile = new File(resources, "items.json");
         JsonReader jsonReader = new JsonReader(new FileReader(itemsFile));
 
@@ -25,6 +25,9 @@ public class FileManager {
                 ItemType newItem = gson.fromJson(jsonObject, ItemType.class);
                 ItemType.REGISTERED.put(newItem.id,newItem);
                 ItemType.itemIDLookup.put(newItem.name, newItem.id);
+                if (Integer.parseInt(jsonObject.get("ID").getAsString()) < 10) {
+                    ItemType.BASIC_TYPES.add(newItem);
+                }
             }
         }
     }

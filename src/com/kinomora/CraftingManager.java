@@ -20,7 +20,8 @@ public class CraftingManager {
 
     //returns a recipe for a given itemtype output ie How craft an item, what two items you need
     public static Recipe getRecipe(ItemType itemType1, ItemType itemType2) {
-        return RECIPES.get(new Pair(itemType1, itemType2));
+        Recipe out = RECIPES.get(new Pair(itemType1, itemType2));
+        return out == null ? RECIPES.get(new Pair<>(itemType2, itemType1)) : out;
     }
 
     //returns the recipe for a given output item
