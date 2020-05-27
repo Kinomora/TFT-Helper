@@ -16,6 +16,7 @@ public class FileManager {
     //Load the items from the items.json file
     public static void loadItems() throws Exception {
         InputStream itemStream = Main.class.getClassLoader().getResourceAsStream("items.json");
+        System.out.println(itemStream);
         JsonReader jsonReader = new JsonReader(new InputStreamReader(itemStream));
 
         //loads entire items.json file as a json array object

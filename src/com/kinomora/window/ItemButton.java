@@ -93,7 +93,7 @@ public class ItemButton extends JButton implements ActionListener, MouseListener
             if (e.getButton() == MouseEvent.BUTTON1) {
                 if (isInventory) {
                     this.itemsTab.inventoryPanel.removeItem(index);
-                    this.itemsTab.itemDescPanel.setItemInfo(null);
+                    //this.itemsTab.itemDescPanel.setItemInfo(null);
                 } else {
                     this.itemsTab.inventoryPanel.addItem(type);
                 }

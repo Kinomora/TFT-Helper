@@ -1,7 +1,7 @@
 package com.kinomora.window;
 
-import com.kinomora.window.overview.ChampionsOverviewTab;
-import com.kinomora.window.overview.GameOverviewTab;
+import com.kinomora.window.overview.PlayerOverviewTab;
+import com.kinomora.window.overview.ChampionPoolTab;
 import com.kinomora.window.overview.ItemsOverviewTab;
 
 import javax.swing.*;
@@ -23,16 +23,15 @@ public class Window extends JFrame implements KeyListener {
         JTabbedPane tabs = new JTabbedPane();
 
         //Creating the main overview tabs
-        GameOverviewTab gameOverviewTab = new GameOverviewTab();
+        ChampionPoolTab championPoolTab = new ChampionPoolTab();
         ItemsOverviewTab itemsOverviewTab = new ItemsOverviewTab();
-        ChampionsOverviewTab championsOverviewTab = new ChampionsOverviewTab();
+        PlayerOverviewTab playerOverviewTab = new PlayerOverviewTab();
 
         //Add the tabs to the main window
-        /*tabs.addTab("Game", gameOverviewTab.getGameTab());*/
+        tabs.addTab("Champions", championPoolTab);
+        tabs.addTab("Players", playerOverviewTab);
         tabs.addTab("Items", itemsOverviewTab);
-        /*tabs.addTab("Champions", championsOverviewTab.getGameTab());*/
 
-        //???
         this.setContentPane(tabs);
     }
 
