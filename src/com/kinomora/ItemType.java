@@ -1,14 +1,10 @@
 package com.kinomora;
 
-import com.kinomora.window.ItemButton;
-import com.kinomora.window.TintedIcon;
+import com.kinomora.window.utility.TintedIcon;
 
 import javax.imageio.ImageIO;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.*;
 
 //These objects are unique items types, and is what creates the item object

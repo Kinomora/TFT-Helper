@@ -1,6 +1,8 @@
 package com.kinomora.window.overview.championpooltab;
 
 import com.kinomora.window.overview.ChampionPoolTab;
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
@@ -10,6 +12,8 @@ public class RemainingChampionsCountPanel extends JPanel {
 
     public final ChampionPoolTab parent;
     public TitledBorder border;
+    //private final Multimap<ChampionType, > CHAMPIONS;
+
 
     public RemainingChampionsCountPanel(ChampionPoolTab parent){
         super(new GridLayout(9, 5));

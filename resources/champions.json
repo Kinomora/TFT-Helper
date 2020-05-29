@@ -1,0 +1,314 @@
+[
+    {
+        "Name": "Ahri",
+        "Origin": "Star Guardian",
+        "Class": ["Sorcerer"],
+        "Cost": "2"
+    },
+    {
+        "Name": "Annie",
+        "Origin": "Mech Pilot",
+        "Class": ["Sorcerer"],
+        "Cost": "2"
+    },
+    {
+        "Name": "Ashe",
+        "Origin": "Celestial",
+        "Class": ["Sniper"],
+        "Cost": "3"
+    },
+    {
+        "Name": "Aurelion Sol",
+        "Origin": "Rebel",
+        "Class": ["Starship"],
+        "Cost": "5"
+    },
+    {
+        "Name": "Blitzcrank",
+        "Origin": "Chrono",
+        "Class": ["Brawler"],
+        "Cost": "2"
+    },
+    {
+        "Name": "Caitlyn",
+        "Origin": "Chrono",
+        "Class": ["Sniper"],
+        "Cost": "1"
+    },
+    {
+        "Name": "Chogath",
+        "Origin": "Void",
+        "Class": ["Brawler"],
+        "Cost": "4"
+    },
+    {
+        "Name": "Darius",
+        "Origin": "Space Pirate",
+        "Class": ["Mana-Reaver"],
+        "Cost": "2"
+    },
+    {
+        "Name": "Ekko",
+        "Origin": "Cybernetic",
+        "Class": ["Infiltrator"],
+        "Cost": "5"
+    },
+    {
+        "Name": "Ezreal",
+        "Origin": "Chrono",
+        "Class": ["Blaster"],
+        "Cost": "3"
+    },
+    {
+        "Name": "Fiora",
+        "Origin": "Cybernetic",
+        "Class": ["Blademaster"],
+        "Cost": "1"
+    },
+    {
+        "Name": "Fizz",
+        "Origin": "Mech Pilot",
+        "Class": ["Infiltrator"],
+        "Cost": "4"
+    },
+    {
+        "Name": "Gangplank",
+        "Origin": "Space Pirate",
+        "Class": ["Mercenary", "Demolitionist"],
+        "Cost": "5"
+    },
+    {
+        "Name": "Graves",
+        "Origin": "Space Pirate",
+        "Class": ["Blaster"],
+        "Cost": "1"
+    },
+    {
+        "Name": "Irelia",
+        "Origin": "Cybernetic",
+        "Class": ["Mana-Reaver", "Blademaster"],
+        "Cost": "4"
+    },
+    {
+        "Name": "Jarvan IV",
+        "Origin": "Dark Star",
+        "Class": ["Protector"],
+        "Cost": "1"
+    },
+    {
+        "Name": "Jayce",
+        "Origin": "Space Pirate",
+        "Class": ["Vanguard"],
+        "Cost": "3"
+    },
+    {
+        "Name": "Jhin",
+        "Origin": "Dark Star",
+        "Class": ["Sniper"],
+        "Cost": "4"
+    },
+    {
+        "Name": "Jinx",
+        "Origin": "Rebel",
+        "Class": ["Blaster"],
+        "Cost": "4"
+    },
+    {
+        "Name": "Kaisa",
+        "Origin": "Valkyrie",
+        "Class": ["Infiltrator"],
+        "Cost": "2"
+    },
+    {
+        "Name": "Karma",
+        "Origin": "Dark Star",
+        "Class": ["Mystic"],
+        "Cost": "3"
+    },
+    {
+        "Name": "Kassadin",
+        "Origin": "Celestial",
+        "Class": ["Mana-Reaver"],
+        "Cost": "3"
+    },
+    {
+        "Name": "Kayle",
+        "Origin": "Valkyrie",
+        "Class": ["Blademaster"],
+        "Cost": "4"
+    },
+    {
+        "Name": "Khazix",
+        "Origin": "Void",
+        "Class": ["Infiltrator"],
+        "Cost": "1"
+    },
+    {
+        "Name": "Leona",
+        "Origin": "Cybernetic",
+        "Class": ["Vanguard"],
+        "Cost": "1"
+    },
+    {
+        "Name": "Lucian",
+        "Origin": "Cybernetic",
+        "Class": ["Blaster"],
+        "Cost": "2"
+    },
+    {
+        "Name": "Lulu",
+        "Origin": "Celestial",
+        "Class": ["Mystic"],
+        "Cost": "5"
+    },
+    {
+        "Name": "Lux",
+        "Origin": "Dark Star",
+        "Class": ["Sorcerer"],
+        "Cost": "3"
+    },
+    {
+        "Name": "Malphite",
+        "Origin": "Rebel",
+        "Class": ["Brawler"],
+        "Cost": "1"
+    },
+    {
+        "Name": "Master Yi",
+        "Origin": "Rebel",
+        "Class": ["Blaster"],
+        "Cost": "3"
+    },
+    {
+        "Name": "Miss Fortune",
+        "Origin": "Valkyrie",
+        "Class": ["Mercenary", "Blaster"],
+        "Cost": "5"
+    },
+    {
+        "Name": "Mordekaiser",
+        "Origin": "Dark Star",
+        "Class": ["Vanguard"],
+        "Cost": "2"
+    },
+    {
+        "Name": "Neeko",
+        "Origin": "Star Guardian",
+        "Class": ["Protector"],
+        "Cost": "3"
+    },
+    {
+        "Name": "Poppy",
+        "Origin": "Star Guardian",
+        "Class": ["Vanguard"],
+        "Cost": "1"
+    },
+    {
+        "Name": "Rakan",
+        "Origin": "Celestial",
+        "Class": ["Protector"],
+        "Cost": "2"
+    },
+    {
+        "Name": "Rumble",
+        "Origin": "Mech Pilot",
+        "Class": ["Demolitionist"],
+        "Cost": "3"
+    },
+    {
+        "Name": "Shaco",
+        "Origin": "Dark Star",
+        "Class": ["Infiltrator"],
+        "Cost": "3"
+    },
+    {
+        "Name": "Shen",
+        "Origin": "Chrono",
+        "Class": ["Blademaster"],
+        "Cost": "2"
+    },
+    {
+        "Name": "Sona",
+        "Origin": "Rebel",
+        "Class": ["Mystic"],
+        "Cost": "2"
+    },
+    {
+        "Name": "Soraka",
+        "Origin": "Star Guardian",
+        "Class": ["Mystic"],
+        "Cost": "4"
+    },
+    {
+        "Name": "Syndra",
+        "Origin": "Star Guardian",
+        "Class": ["Sorcerer"],
+        "Cost": "2"
+    },
+    {
+        "Name": "Thresh",
+        "Origin": "Chrono",
+        "Class": ["Mana-Reaver"],
+        "Cost": "5"
+    },
+    {
+        "Name": "Twisted Fate",
+        "Origin": "Chrono",
+        "Class": ["Sorcerer"],
+        "Cost": "1"
+    },
+    {
+        "Name": "Velkoz",
+        "Origin": "Void",
+        "Class": ["Sorcerer"],
+        "Cost": "4"
+    },
+    {
+        "Name": "Vi",
+        "Origin": "Cybernetic",
+        "Class": ["Brawler"],
+        "Cost": "3"
+    },
+    {
+        "Name": "Wukong",
+        "Origin": "Chrono",
+        "Class": ["Vanguard"],
+        "Cost": "4"
+    },
+    {
+        "Name": "Xayah",
+        "Origin": "Celestial",
+        "Class": ["Blademaster"],
+        "Cost": "1"
+    },
+    {
+        "Name": "Xerath",
+        "Origin": "Dark Star",
+        "Class": ["Sorcerer"],
+        "Cost": "5"
+    },
+    {
+        "Name": "Xin Zhao",
+        "Origin": "Celestial",
+        "Class": ["Protector"],
+        "Cost": "2"
+    },
+    {
+        "Name": "Yasuo",
+        "Origin": "Rebel",
+        "Class": ["Blademaster"],
+        "Cost": "2"
+    },
+    {
+        "Name": "Ziggs",
+        "Origin": "Rebel",
+        "Class": ["Demolitionist"],
+        "Cost": "1"
+    },
+    {
+        "Name": "Zoe",
+        "Origin": "Star Guardian",
+        "Class": ["Sorcerer"],
+        "Cost": "1"
+    }
+]

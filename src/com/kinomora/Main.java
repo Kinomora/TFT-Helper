@@ -1,10 +1,9 @@
 package com.kinomora;
 
-import com.kinomora.window.Window;
+import com.kinomora.window.MainWindow;
 
 import javax.swing.*;
 import java.io.File;
-import java.net.Inet4Address;
 
 public class Main {
 
@@ -21,7 +20,7 @@ public class Main {
         FileManager.loadRecipes();
 
         //Set up the GUI window - must be done after loading items and recipes
-        Window window = new Window("TFT Helper - Set 3");
+        MainWindow window = new MainWindow("TFT Helper - Set 3");
         window.pack();
         window.setSize(568, 890);
         window.setResizable(false);

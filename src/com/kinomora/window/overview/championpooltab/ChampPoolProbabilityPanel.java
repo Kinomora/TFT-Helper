@@ -1,6 +1,5 @@
 package com.kinomora.window.overview.championpooltab;
 
-import com.kinomora.window.ItemButton;
 import com.kinomora.window.overview.ChampionPoolTab;
 
 import javax.swing.*;

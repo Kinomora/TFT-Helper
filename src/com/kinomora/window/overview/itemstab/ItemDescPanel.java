@@ -3,7 +3,7 @@ package com.kinomora.window.overview.itemstab;
 import com.kinomora.CraftingManager;
 import com.kinomora.ItemType;
 import com.kinomora.Recipe;
-import com.kinomora.window.ItemButton;
+import com.kinomora.window.utility.ItemButton;
 import com.kinomora.window.overview.ItemsOverviewTab;
 
 import javax.swing.*;
@@ -75,7 +75,7 @@ public class ItemDescPanel extends JPanel {
         description.setOpaque(false);
         this.add(description);
 
-        this.add(new ChampionPanel(), BorderLayout.SOUTH);
+        this.add(new SuggestedChampionsPanel(), BorderLayout.SOUTH);
     }
 
     private void removeItemInfo() {

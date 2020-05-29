@@ -4,7 +4,7 @@ import com.kinomora.CraftingManager;
 import com.kinomora.Inventory;
 import com.kinomora.ItemType;
 import com.kinomora.Recipe;
-import com.kinomora.window.ItemButton;
+import com.kinomora.window.utility.ItemButton;
 import com.kinomora.window.overview.ItemsOverviewTab;
 import javafx.util.Pair;
 
